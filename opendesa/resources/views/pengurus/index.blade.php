@@ -13,7 +13,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="mb-5 right-0">
                 <a class="bg-blue-500 hover:bg-blue-700 text-white py-1 px-6 rounded"
-                    href="{{ route('pengurus.create') }}">
+                    href="{{ url('pengurus/create') }}">
                     Create
                 </a>
             </div>

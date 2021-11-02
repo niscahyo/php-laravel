@@ -25,4 +25,9 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-Route::resource('pengurus', PengurusController::class);
+//Route::resource('pengurus', PengurusController::class);
+Route::get('/pengurus', [PengurusController::class, 'index']);
+Route::get('/pengurus/create', [PengurusController::class, 'create']);
+Route::post('/pengurus/create', [PengurusController::class, 'store']);
+Route::get('/pengurus/edit', [PengurusController::class, 'edit']);
+Route::put('/pengurus/edit', [PengurusController::class, 'update']);

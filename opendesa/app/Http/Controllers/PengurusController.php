@@ -25,14 +25,12 @@ class PengurusController extends Controller
     {
         $request->validate([
             'nama' => 'required',
-            'jabatan' => 'required',
-            'ttd' => 'required'
+            'jabatan' => 'required'
         ]);
+        $input = $request->all();
+        Pengurus::create($input);
 
-        Pengurus::create($request->all());
-
-        return redirect()->route('pengurus.index')
-        ->with('success', 'Pengurus berhasil dibuat');
+        return back()->with('message', 'Sukses');
     }
 
     public function show(pengurus $id)

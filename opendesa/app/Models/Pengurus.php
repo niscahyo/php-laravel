@@ -12,5 +12,5 @@ class Pengurus extends Model
     protected $table = 'penguruses';
     public $timestamps = true;
 
-    protected $fillable = [];
+    protected $fillable = ['nama', 'jabatan'];
 }
